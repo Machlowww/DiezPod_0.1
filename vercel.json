@@ -1,25 +1,5 @@
 {
-  "version": 2,
-  "name": "diezpod",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
-  "env": {
-    "VITE_GOOGLE_CLIENT_ID": "150912343817-idgfluudlsk48hm84ntskqdkb1d1tstr.apps.googleusercontent.com",
-    "VITE_GOOGLE_API_KEY": "AIzaSyAJ0W9ZspTkCXtnlTOPfdaMCvkT5a83vB8",
-    "VITE_OPENWEATHER_API_KEY": "50e6df24f462cb0f57f72e60006cfb37",
-    "VITE_DEFAULT_LOCATION": "Nantes,FR"
-  }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
