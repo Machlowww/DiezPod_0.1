@@ -1,9 +1,8 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useWeather } from '../hooks/useWeather'
 import { weatherApi } from '../services/weatherApi'
 
-const WeatherView: React.FC = () => {
+const WeatherView = () => {
   const navigate = useNavigate()
   const { weather, loading, error } = useWeather()
 

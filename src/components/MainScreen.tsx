@@ -1,10 +1,9 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Clock from './Clock'
 import DateDisplay from './DateDisplay'
 import WeatherDisplay from './WeatherDisplay'
 
-const MainScreen: React.FC = () => {
+const MainScreen = () => {
   const navigate = useNavigate()
 
   return (

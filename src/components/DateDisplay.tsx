@@ -1,10 +1,9 @@
-import React from 'react'
 
 interface DateDisplayProps {
   onClick: () => void
 }
 
-const DateDisplay: React.FC<DateDisplayProps> = ({ onClick }) => {
+const DateDisplay = ({ onClick }: DateDisplayProps) => {
   const formatDate = () => {
     const now = new Date()
     return now.toLocaleDateString('fr-FR', {

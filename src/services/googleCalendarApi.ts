@@ -3,10 +3,8 @@ import { CalendarEvent, CalendarDay } from '../types';
 class GoogleCalendarApiService {
   private readonly CLIENT_ID = '150912343817-idgfluudlsk48hm84ntskqdkb1d1tstr.apps.googleusercontent.com';
   private readonly API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
-  private readonly SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
-  
+    
   private isSignedIn = false;
-  private accessToken: string | null = null;
 
   constructor() {
     this.initialize();
@@ -77,7 +75,6 @@ class GoogleCalendarApiService {
       
       // For now, we'll use a simplified approach
       this.isSignedIn = true;
-      this.accessToken = credential;
     } catch (error) {
       console.error('Error handling sign-in:', error);
     }

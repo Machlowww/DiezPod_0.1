@@ -1,4 +1,3 @@
-import React from 'react'
 import { useWeather } from '../hooks/useWeather'
 import { weatherApi } from '../services/weatherApi'
 
@@ -6,7 +5,7 @@ interface WeatherDisplayProps {
   onClick: () => void
 }
 
-const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ onClick }) => {
+const WeatherDisplay = ({ onClick }: WeatherDisplayProps) => {
   const { weather, loading, error } = useWeather()
 
   if (loading) {

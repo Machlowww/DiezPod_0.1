@@ -1,9 +1,8 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCalendar } from '../hooks/useCalendar'
 import { simpleGoogleCalendarApi } from '../services/simpleGoogleCalendarApi'
 
-const CalendarView: React.FC = () => {
+const CalendarView = () => {
   const navigate = useNavigate()
   const { calendarDay, loading, error } = useCalendar()
 
